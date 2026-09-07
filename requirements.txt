@@ -1,0 +1,25 @@
+# MediBot — dependencies, added incrementally as each component is built.
+# See README.md for the component roadmap.
+
+# Component 1: Document Ingestion
+docling
+docling-hierarchical-pdf
+transformers
+sentence-transformers
+qdrant-client
+
+# Component 2: Hybrid RAG (dense + BM25 sparse, fused server-side in Qdrant)
+fastembed
+groq
+python-dotenv
+
+# Component 3: Reranking -- no new deps (CrossEncoder ships with sentence-transformers)
+
+# Component 4: SQL RAG (LangChain's create_sql_query_chain, per S5_01_advanced_rag.ipynb)
+langchain-classic
+langchain-community
+langchain-groq
+
+# Component 5: FastAPI backend (fastapi[standard] bundles fastapi-cli/uvicorn for `fastapi dev`,
+# per S1_ch1_fastapi_intro's taught workflow)
+fastapi[standard]
